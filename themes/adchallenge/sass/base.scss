@@ -1,0 +1,40 @@
+/*General*/
+body{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+  font-size: 100%;
+  vertical-align: baseline;
+  color: $primaryColor;
+  font: 14px/16px 'PlayfairDisplay-Regular';
+}
+
+img{
+  width: 100%;
+  height: auto;
+  border-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: $primaryColor;
+}
+
+.layout-container{
+  width: 100%;
+}
+
+main, .layout-content, footer, header{
+  &:after{
+    @include clearfix();
+  }
+}
+
+.layout-content, aside, footer{
+  @include prefix(box-sizing, border-box, webkit ms);
+}
+
+.region-header, main, .region-footer{
+      @include innerWrap();
+}

@@ -4,6 +4,13 @@ global-styling:
     base:
       css/style.css: {}
 
+    theme:
+      css/style.css: {}
+    layout:
+      css/style.css: {}
+    component:
+      css/style.css: {}
+
   js:
     javascripts/scripts.js: {}
 

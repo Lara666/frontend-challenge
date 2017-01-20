@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'PlayfairDisplay-Regular';
+  src: url('../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ubuntu-Light';
+  src: url('../fonts/Ubuntu/Ubuntu-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*Mixin*/
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+@mixin clearfix(){
+  content: "";
+  display: block;
+  clear: both;
+}
+
+@mixin innerWrap(){
+	position: relative;
+  display: block;
+	width: 1095px;
+	margin: 0 auto;
+	padding: 0;
+	@include prefix(box-sizing, border-box, webkit ms);
+}
+
+$primaryColor: #626262;
+
+/*Responsive Variables*/
+$xsmall-devices: 420px;
+$small-devices: 768px;
+$medium-devices: 1070px;

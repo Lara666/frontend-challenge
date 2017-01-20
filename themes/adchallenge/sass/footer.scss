@@ -1,0 +1,31 @@
+footer{
+  width: 100%;
+  position: relative;
+  height: 60px;
+  background: #f0f0f0;
+  padding: 0;
+  margin: 60px 0 0;
+
+	nav{
+	  float: left;
+
+	  ul.menu{
+	    margin: 0;
+
+	     li.menu-item{
+		  float: left;
+		  line-height: 50px;
+		  padding-right: 16px;
+
+		  a{
+		  	color: #000;
+		  	font-size: 14px;
+
+		  	&:hover{
+		  		text-decoration: underline;
+		  	}
+		  }
+		}
+	  }
+	}
+}

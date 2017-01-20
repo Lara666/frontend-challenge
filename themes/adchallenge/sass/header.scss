@@ -1,0 +1,54 @@
+/*Header*/
+header{
+   width: 100%;
+   padding: 65px 0 70px;
+
+   #block-adchallenge-branding{
+ 		float: left;
+	    display: block;
+
+	    a{
+	    	display: block;
+	    }
+
+	    img{
+	    	width: 260px;
+	    	height: auto;
+	    }
+	}
+
+	nav{
+	  float: right;
+
+	  ul.menu{
+	    margin: 0;
+
+	     li.menu-item{
+		  float: left;
+		  padding-top: 7px;
+		  padding-right: 6vw;
+		  text-transform: uppercase;
+
+		  &:last-child{
+		  	padding-right: 0;
+		  }
+
+		  a.is-active{
+			  color: #222;
+		  }
+		}
+	  }
+	}
+}
+
+.sticky-header{
+	position: fixed;
+    background: #ffffff;
+    z-index: 99;
+    padding: 5px 0;
+    box-shadow: 2px 0 12px #222;
+
+    nav ul.menu li.menu-item{
+    	padding-top: 20px;
+    }
+}

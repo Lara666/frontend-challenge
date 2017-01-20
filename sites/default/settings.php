@@ -308,7 +308,7 @@ $settings['hash_salt'] = 'zZ41R66O87mKpqEO-0fTAu1yTLVoLf_ox1YpUSIof_AcWeJ7q4_Mpz
  * After finishing the upgrade, be sure to open this file again and change the
  * TRUE back to a FALSE!
  */
-$settings['update_free_access'] = FALSE;
+$settings['update_free_access'] = TRUE;
 
 /**
  * External access proxy settings:
@@ -753,7 +753,19 @@ $settings['file_scan_ignore_directories'] = [
 #   include __DIR__ . '/settings.local.php';
 # }
 
-require_once __DIR__ . '/settings.local.php';
+//equire_once __DIR__ . '/settings.local.php';
+
+$databases['default']['default'] = array (
+    'database' => 'agiledrop_challenge',
+    'username' => 'root',
+    'password' => '',
+    'prefix' => '',
+    'host' => '127.0.0.1',
+    'port' => '3306',
+    'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+    'driver' => 'mysql',
+);
+
 
 $settings['install_profile'] = 'standard';
 $config_directories['sync'] = 'sites/default/files/config/sync';
